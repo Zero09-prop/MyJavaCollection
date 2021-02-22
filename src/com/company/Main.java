@@ -1,19 +1,14 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyCollection a = new MyCollection(5);
+		a.Add(1);
+		a.Add(1,2);
+		a.Add(2,3);
+        System.out.println(a.get(2));
+        
+	}
 
-    public static void main(String[] args) {
-        ArrayList<Integer> mu = new ArrayList<Integer>(4);
-        mu.add(5);
-        mu.add(6);
-        mu.add(6,7);
-        int[] a = new int[2];
-        int[] b;
-        a[0] = 1;
-        a[1] = 3;
-        System.out.println(a);
-    }
 }
