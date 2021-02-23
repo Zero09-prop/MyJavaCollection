@@ -7,7 +7,9 @@ public class Main {
 		a.Add(1);
 		a.Add(1,2);
 		a.Add(2,3);
-        System.out.println(a.get(2));
+        for(var i: a) {
+        	System.out.println(i);
+        }
         
 	}
 

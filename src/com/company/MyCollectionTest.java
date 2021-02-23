@@ -19,10 +19,10 @@ public class MyCollectionTest {
 	@Test
 	public void testAddInt() {
 		MyCollection con1 = new MyCollection();
-		boolean Ys1 = con1.Add(1);
-		boolean Ys2 = con1.Add(2);
-		boolean Ys3 = con1.Add(3);
-		boolean actual = Ys1 && Ys2 && Ys3;
+		con1.Add(1);
+		con1.Add(2);
+		con1.Add(3);
+		boolean actual = (con1.get(0) == 1) && (con1.get(1) == 2) && (con1.get(2) == 3);
 		boolean expected = true;
 		assertEquals(expected,actual);
 	}
@@ -40,5 +40,34 @@ public class MyCollectionTest {
 		assertEquals(expected,actual);
 		
 	}
-
+	
+	@Test
+	public void testSize() {
+		MyCollection con1 = new MyCollection();
+		con1.Add(1);
+		con1.Add(2);
+		con1.Add(3);
+		int actual = con1.size();
+		int expected = 3;
+		assertEquals(expected,actual);
+	}
+	
+	@Test
+	public void testGet() {
+		MyCollection con1 = new MyCollection();
+		con1.Add(3);
+		int actual = con1.get(0);
+		int expected = 3;
+		assertEquals(expected,actual);
+	}
+	
+	@Test
+	public void testSet() {
+		MyCollection con1 = new MyCollection();
+		con1.Add(3);
+		con1.set(0, 4);
+		int actual = con1.get(0);
+		int expected = 4;
+		assertEquals(expected,actual);
+	}
 }
